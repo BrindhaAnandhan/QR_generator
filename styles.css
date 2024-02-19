@@ -53,11 +53,46 @@ body{
     margin: 10px 0;
     font-weight: 400;
 }
-.container .imgbox
+#imgbox
 {
-    margin:20px 75px;
+    width: 200px;
+    border-radius: 5px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s;
+}
+#imgbox img
+{
+    width: 100%;
+    padding: 10px;
+}
+
+#imgbox.show-img
+{
+    max-height: 300px;
+    margin: 10px auto;
     border: 1px solid black;
-    padding: 15px;
-    border-radius: 3px;
-    width: 55%;
+}
+.error
+{
+    animation: shake 0.1s linear 5;
+    box-shadow: 0 10px 10px rgba(236, 7, 7, 0.1);
+}
+@keyframes shake{
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(-2px);
+    }
+    50%{
+        transform: translateX(0);
+    }
+    75%{
+        transform: translateX(2px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+
 }
